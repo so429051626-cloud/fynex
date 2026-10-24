@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- صفحة حجز طاولة في مقهى Code Café (HTML فقط) -->
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="احجز طاولتك في مقهى Code Café من خلال نموذج الحجز.">
+    <title>Code Café | حجز طاولة</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- ========== رأس الصفحة ========== -->
+    <header>
+        <img src="images/logo.png" alt="شعار مقهى Code Café" width="100" height="100">
+        <h1>حجز طاولة في Code Café</h1>
+
+        <!-- قائمة التنقل -->
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="index.html#menu">قائمة المشروبات والأطعمة</a></li>
+                <li><a href="index.html#contact">تواصل معنا وساعات العمل</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <section>
+            <h2>احجز طاولتك الآن</h2>
+            <p>املأ النموذج التالي لحجز طاولة في المقهى. الحقول المشار إليها بعلامة (<strong>*</strong>) إلزامية.</p>
+
+            <!-- ملاحظة مهمة توضح أن الحجز تجريبي -->
+            <p>
+                <strong>ملاحظة:</strong> هذا نموذج حجز <strong>تجريبي</strong> لمشروع جامعي، وليس نظام حجز حقيقيًا متصلًا بخادم؛
+                فالبيانات لا تُحفظ في أي قاعدة بيانات، وعند الضغط على زر الإرسال ينتقل المتصفح إلى صفحة الشكر فقط.
+            </p>
+
+            <!--
+                النموذج form:
+                action="Thanks.html" : الصفحة التي ينتقل إليها المتصفح عند الإرسال.
+                method="get"         : طريقة الإرسال، وتظهر البيانات في شريط العنوان بعد علامة ?
+            -->
+            <form action="Thanks.html" method="get">
+
+                <!-- المجموعة الأولى: البيانات الشخصية -->
+                <fieldset>
+                    <legend>البيانات الشخصية</legend>
+
+                    <!-- for في label يجب أن تساوي id في input حتى يرتبطا ببعض -->
+                    <p>
+                        <label for="fullname">الاسم الكامل: *</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="مثال: أحمد محمد علي" minlength="3" maxlength="50" required>
+                    </p>
+
+                    <p>
+                        <label for="email">البريد الإلكتروني: *</label><br>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </p>
+
+                    <p>
+                        <label for="phone">رقم الهاتف: *</label><br>
+                        <input type="tel" id="phone" name="phone" placeholder="أرقام فقط، مثال: 0791234567" pattern="[0-9]{8,15}" title="أدخل رقم الهاتف بالأرقام فقط (من 8 إلى 15 رقمًا)" required>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- المجموعة الثانية: تفاصيل الحجز -->
+                <fieldset>
+                    <legend>تفاصيل الحجز</legend>
+
+                    <p>
+                        <label for="date">تاريخ الحجز: *</label><br>
+                        <input type="date" id="date" name="date" required>
+                    </p>
+
+                    <p>
+                        <label for="time">وقت الحجز: * (من 8:00 صباحًا حتى 10:00 مساءً)</label><br>
+                        <input type="time" id="time" name="time" min="08:00" max="22:00" required>
+                    </p>
+
+                    <p>
+                        <label for="guests">عدد الأشخاص: *</label><br>
+                        <select id="guests" name="guests" required>
+                            <option value="">-- اختر عدد الأشخاص --</option>
+                            <option value="1">شخص واحد</option>
+                            <option value="2">شخصان</option>
+                            <option value="3">3 أشخاص</option>
+                            <option value="4">4 أشخاص</option>
+                            <option value="5">5 أشخاص</option>
+                            <option value="6">6 أشخاص</option>
+                            <option value="7">7 أشخاص</option>
+                            <option value="8">8 أشخاص</option>
+                        </select>
+                    </p>
+
+                    <!-- أزرار الاختيار radio: لها نفس name لذلك يمكن اختيار خيار واحد فقط -->
+                    <p>مكان الجلوس المفضل:</p>
+                    <p>
+                        <input type="radio" id="indoor" name="seating" value="indoor" checked>
+                        <label for="indoor">داخل المقهى</label><br>
+
+                        <input type="radio" id="terrace" name="seating" value="terrace">
+                        <label for="terrace">التراس الخارجي</label><br>
+
+                        <input type="radio" id="quiet" name="seating" value="quiet-zone">
+                        <label for="quiet">ركن البرمجة الهادئ</label>
+                    </p>
+                </fieldset>
+
+                <br>
+
+                <!-- المجموعة الثالثة: ملاحظات إضافية -->
+                <fieldset>
+                    <legend>ملاحظات إضافية</legend>
+
+                    <p>
+                        <label for="notes">هل لديك أي ملاحظات أو طلبات خاصة؟ (اختياري)</label><br>
+                        <textarea id="notes" name="notes" rows="5" cols="40" maxlength="300" placeholder="مثال: أحتاج طاولة قريبة من مقبس كهرباء."></textarea>
+                    </p>
+
+                    <p>
+                        <input type="checkbox" id="agree" name="agree" value="yes" required>
+                        <label for="agree">أعلم أن هذا حجز تجريبي لأغراض تعليمية فقط. *</label>
+                    </p>
+                </fieldset>
+
+                <!-- زر الإرسال وزر مسح الحقول -->
+                <p>
+                    <input type="submit" value="إرسال الحجز">
+                    <input type="reset" value="مسح الحقول">
+                </p>
+            </form>
+        </section>
+
+        <!-- رابط العودة إلى الصفحة الرئيسية -->
+        <p><a href="index.html">→ العودة إلى الصفحة الرئيسية</a></p>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Code Café - جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+
+</html>

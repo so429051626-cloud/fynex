@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!-- الصفحة الرئيسية لموقع مقهى Code Café (مكتوبة بلغة HTML فقط، بدون CSS وبدون JavaScript) -->
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- ترميز الأحرف UTF-8 حتى تظهر الحروف العربية بشكل صحيح -->
+    <meta charset="UTF-8">
+    <!-- يجعل الصفحة مناسبة لعرض شاشة الجهاز (الحاسوب أو الهاتف) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- وصف مختصر للصفحة تستخدمه محركات البحث -->
+    <meta name="description" content="Code Café مقهى عصري يجمع بين القهوة المختصة وأجواء الدراسة والبرمجة.">
+    <!-- عنوان الصفحة الذي يظهر في تبويب المتصفح -->
+    <title>Code Café | الصفحة الرئيسية</title>
+    <!-- أيقونة الموقع التي تظهر في تبويب المتصفح (وهي صورة وليست CSS) -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+
+<body>
+
+    <!-- ========== رأس الصفحة: الشعار واسم المقهى وقائمة التنقل ========== -->
+    <header id="top">
+        <img src="images/logo.png" alt="شعار مقهى Code Café: فنجان قهوة يعلوه رمز البرمجة" width="120" height="120">
+        <h1>Code Café ☕</h1>
+        <p><strong>&lt;/&gt; حيث تلتقي القهوة بالبرمجة</strong></p>
+        <p><em>Where Coffee Meets Code</em></p>
+
+        <!-- قائمة التنقل: روابط إلى أقسام هذه الصفحة وإلى صفحة الحجز -->
+        <nav>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="#about">من نحن</a></li>
+                <li><a href="#menu">قائمة المشروبات والأطعمة</a></li>
+                <li><a href="#gallery">أجواء المقهى</a></li>
+                <li><a href="#contact">تواصل معنا وساعات العمل</a></li>
+                <li><a href="Reserve.html"><strong>احجز طاولة</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <!-- ========== المحتوى الرئيسي للصفحة ========== -->
+    <main>
+
+        <!-- القسم الأول: الترحيب -->
+        <section id="welcome">
+            <h2>أهلًا وسهلًا بك في Code Café</h2>
+            <img src="images/hero.jpg" alt="صورة توضيحية لداخل المقهى: لافتة مضيئة باسم Code Café وحاسوب محمول وفنجان قهوة على الطاولة" width="960" height="400">
+            <p>
+                سواء كنت طالبًا تستعد لاختبار، أو مبرمجًا يعمل على مشروعه، أو تبحث فقط عن فنجان قهوة لذيذ،
+                ستجد في <strong>Code Café</strong> مكانًا مريحًا وهادئًا يساعدك على التركيز والإبداع.
+            </p>
+            <p><a href="Reserve.html"><strong>احجز طاولتك الآن ←</strong></a></p>
+        </section>
+
+        <hr>
+
+        <!-- القسم الثاني: نبذة عن المقهى وفكرته -->
+        <section id="about">
+            <h2>من نحن؟</h2>
+            <img src="images/about.jpg" alt="ركن تحضير القهوة في المقهى: آلة إسبريسو ولوحة قائمة الأسعار" width="450" height="300">
+            <p>
+                <strong>Code Café</strong> مقهى عصري افتتح أبوابه عام 2024، وفكرته بسيطة: أن يجد طلاب الجامعات
+                والمبرمجون والمصممون مكانًا واحدًا يجمع بين القهوة المميزة وبيئة مناسبة للدراسة والعمل على المشاريع.
+            </p>
+            <p>
+                اخترنا الاسم <em>Code Café</em> لأننا نؤمن أن أفضل الأفكار البرمجية تولد مع فنجان قهوة،
+                لذلك صممنا المقهى بكل ما يحتاجه المبرمج: هدوء، وإنترنت سريع، ومقاعد مريحة.
+            </p>
+
+            <h3>ما الذي يميزنا؟</h3>
+            <!-- قائمة غير مرتبة (نقاط) -->
+            <ul>
+                <li><strong>قهوة مختصة:</strong> حبوب بن محمّصة محليًا وتُحضَّر بعناية.</li>
+                <li><strong>إنترنت سريع ومجاني:</strong> لجميع زوار المقهى.</li>
+                <li><strong>مقابس كهرباء:</strong> بجانب كل طاولة لشحن الحاسوب والهاتف.</li>
+                <li><strong>ركن البرمجة الهادئ:</strong> مخصص للدراسة والعمل بتركيز.</li>
+                <li><strong>ورش عمل أسبوعية:</strong> لتعليم أساسيات البرمجة للمبتدئين.</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <!-- القسم الثالث: قائمة المشروبات والأطعمة (باستخدام الجداول) -->
+        <section id="menu">
+            <h2>قائمة المشروبات والأطعمة</h2>
+            <p>جميع الأسعار بالدولار الأمريكي ($) وتشمل الضريبة.</p>
+
+            <!-- جدول المشروبات -->
+            <table border="1" cellpadding="8">
+                <caption><strong>☕ المشروبات</strong></caption>
+                <thead>
+                    <tr>
+                        <th>الصورة</th>
+                        <th>اسم المشروب</th>
+                        <th>الوصف</th>
+                        <th>السعر ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/espresso.jpg" alt="فنجان إسبريسو صغير على صحن" width="120" height="120"></td>
+                        <td>إسبريسو <em>Hello World</em></td>
+                        <td>جرعة مركّزة من البن المختص، البداية المثالية لأي يوم.</td>
+                        <td>2.50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/cappuccino.jpg" alt="فنجان كابتشينو برسمة قلب على الرغوة" width="120" height="120"></td>
+                        <td>كابتشينو <em>Commit</em></td>
+                        <td>إسبريسو مع حليب مبخّر ورغوة كثيفة ورشة كاكاو.</td>
+                        <td>3.75</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/java-latte.jpg" alt="كوب لاتيه زجاجي بطبقات من القهوة والحليب" width="120" height="120"></td>
+                        <td>جافا لاتيه <em>Java Latte</em></td>
+                        <td>إسبريسو مع حليب ناعم وطبقة رغوة خفيفة، المشروب المفضل للمبرمجين.</td>
+                        <td>4.00</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/mocha.jpg" alt="كوب موكا مع كريمة مخفوقة وصوص الشوكولاتة" width="120" height="120"></td>
+                        <td>موكا <em>Debug</em></td>
+                        <td>إسبريسو وشوكولاتة داكنة وحليب مع كريمة مخفوقة.</td>
+                        <td>4.25</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/cold-brew.jpg" alt="كوب قهوة باردة مع مكعبات الثلج" width="120" height="120"></td>
+                        <td>كولد برو <em>Cold Boot</em></td>
+                        <td>قهوة مستخلصة على البارد لمدة 18 ساعة وتقدَّم مع الثلج.</td>
+                        <td>4.50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/matcha.jpg" alt="فنجان ماتشا لاتيه أخضر برسمة ورقة" width="120" height="120"></td>
+                        <td>ماتشا لاتيه <em>Green Build</em></td>
+                        <td>شاي ماتشا ياباني مع الحليب، خيار رائع لمن لا يشرب القهوة.</td>
+                        <td>4.00</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <!-- جدول الأطعمة -->
+            <table border="1" cellpadding="8">
+                <caption><strong>🥐 الأطعمة والحلويات</strong></caption>
+                <thead>
+                    <tr>
+                        <th>الصورة</th>
+                        <th>اسم الصنف</th>
+                        <th>الوصف</th>
+                        <th>السعر ($)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="images/croissant.jpg" alt="كرواسون ذهبي على طبق" width="120" height="120"></td>
+                        <td>كرواسون <em>Loop</em></td>
+                        <td>كرواسون فرنسي بالزبدة يُخبز طازجًا كل صباح.</td>
+                        <td>2.75</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/cheesecake.jpg" alt="قطعة تشيز كيك مع صوص التوت" width="120" height="120"></td>
+                        <td>تشيز كيك <em>Class</em></td>
+                        <td>شريحة تشيز كيك كريمية مع صوص التوت الأحمر.</td>
+                        <td>4.50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/sandwich.jpg" alt="ساندويتش كلوب بطبقات متعددة" width="120" height="120"></td>
+                        <td>ساندويتش <em>Full Stack</em></td>
+                        <td>ساندويتش كلوب بطبقات الدجاج والجبن والخضار الطازجة.</td>
+                        <td>5.50</td>
+                    </tr>
+                    <tr>
+                        <td><img src="images/cookies.jpg" alt="طبق كوكيز بقطع الشوكولاتة" width="120" height="120"></td>
+                        <td>كوكيز <em>Browser Cookies</em></td>
+                        <td>ثلاث قطع كوكيز بالشوكولاتة، وهي كوكيز لا تتتبّع تصفحك!</td>
+                        <td>2.00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- القسم الرابع: أجواء المقهى (صور وفيديو وصوت) -->
+        <section id="gallery">
+            <h2>أجواء المقهى</h2>
+            <p>جولة مصوّرة في أركان Code Café المختلفة:</p>
+
+            <!-- العنصر figure يجمع الصورة مع وصفها figcaption -->
+            <figure>
+                <img src="images/gallery-coding-corner.jpg" alt="ركن البرمجة الهادئ: مكتب عليه حاسوبان ومكتبة كتب برمجة" width="400" height="250">
+                <figcaption>ركن البرمجة الهادئ مع مقابس كهرباء وإنترنت سريع.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/gallery-pastries.jpg" alt="واجهة عرض زجاجية فيها كرواسون وكعك ودونات وكوكيز" width="400" height="250">
+                <figcaption>واجهة المخبوزات والحلويات الطازجة.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/gallery-terrace.jpg" alt="التراس الخارجي وقت الغروب مع مظلات وطاولات وأضواء معلّقة" width="400" height="250">
+                <figcaption>التراس الخارجي بأجواء الغروب.</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/gallery-workshop.jpg" alt="ورشة HTML للمبتدئين: شاشة عرض عليها كود ومجموعة من الطلاب" width="400" height="250">
+                <figcaption>ورشة HTML للمبتدئين التي نقيمها كل أسبوع.</figcaption>
+            </figure>
+
+            <!-- فيديو قصير من مجلد media، وcontrols تعرض أزرار التشغيل -->
+            <h3>🎬 جولة قصيرة داخل المقهى</h3>
+            <video controls width="640" height="360" poster="images/video-poster.jpg">
+                <source src="media/cafe-tour.mp4" type="video/mp4">
+                متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+
+            <!-- ملف صوتي من مجلد media -->
+            <h3>🎵 استمع إلى موسيقى المقهى</h3>
+            <audio controls>
+                <source src="media/cafe-music.mp3" type="audio/mpeg">
+                متصفحك لا يدعم تشغيل الصوت.
+            </audio>
+        </section>
+
+        <hr>
+
+        <!-- القسم الخامس: أسئلة شائعة (العنصر details يفتح ويغلق بدون JavaScript) -->
+        <section id="faq">
+            <h2>أسئلة شائعة</h2>
+            <details>
+                <summary>هل الإنترنت مجاني؟</summary>
+                <p>نعم، الإنترنت مجاني لجميع الزوار، وتجد كلمة المرور مطبوعة على الفاتورة.</p>
+            </details>
+            <details>
+                <summary>هل يجب أن أحجز طاولة مسبقًا؟</summary>
+                <p>الحجز غير إلزامي، لكنه يضمن لك مكانًا في أوقات الازدحام وخاصة في المساء.</p>
+            </details>
+            <details>
+                <summary>متى تقام ورش البرمجة؟</summary>
+                <p>كل يوم خميس من الساعة 6:00 حتى 8:00 مساءً، والمشاركة مجانية لزوار المقهى.</p>
+            </details>
+        </section>
+
+        <hr>
+
+        <!-- القسم السادس: معلومات التواصل وساعات العمل -->
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+
+            <!-- العنصر address مخصص لمعلومات التواصل -->
+            <address>
+                <strong>العنوان:</strong> شارع المبرمجين، مبنى رقم 10، الطابق الأرضي.<br>
+                <strong>الهاتف:</strong> <a href="tel:0123456789">0123456789</a><br>
+                <strong>البريد الإلكتروني:</strong> <a href="mailto:info@codecafe.example">info@codecafe.example</a>
+            </address>
+
+            <h3>ساعات العمل</h3>
+            <table border="1" cellpadding="8">
+                <thead>
+                    <tr>
+                        <th>اليوم</th>
+                        <th>من</th>
+                        <th>إلى</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>السبت - الأربعاء</td>
+                        <td>8:00 صباحًا</td>
+                        <td>11:00 مساءً</td>
+                    </tr>
+                    <tr>
+                        <td>الخميس</td>
+                        <td>8:00 صباحًا</td>
+                        <td>12:00 منتصف الليل</td>
+                    </tr>
+                    <tr>
+                        <td>الجمعة</td>
+                        <td>2:00 ظهرًا</td>
+                        <td>12:00 منتصف الليل</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>كيف تحجز طاولة؟</h3>
+            <!-- قائمة مرتبة (أرقام) -->
+            <ol>
+                <li>اضغط على رابط <strong>احجز طاولة</strong>.</li>
+                <li>املأ نموذج الحجز ببياناتك.</li>
+                <li>اضغط زر <strong>إرسال الحجز</strong> لتظهر لك صفحة التأكيد.</li>
+            </ol>
+
+            <!-- رابط واضح للانتقال إلى صفحة الحجز -->
+            <p><a href="Reserve.html"><strong>👉 انتقل إلى صفحة حجز طاولة</strong></a></p>
+        </section>
+
+    </main>
+
+    <hr>
+
+    <!-- ========== تذييل الصفحة ========== -->
+    <footer>
+        <p>&copy; 2026 Code Café - جميع الحقوق محفوظة.</p>
+        <p><small>هذا الموقع مشروع جامعي تعليمي، وجميع بيانات المقهى (العنوان والهاتف والأسعار) افتراضية.</small></p>
+        <p><a href="#top">العودة إلى أعلى الصفحة ↑</a></p>
+    </footer>
+
+</body>
+
+</html>
